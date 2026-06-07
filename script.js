@@ -12,6 +12,7 @@ firebase.initializeApp(firebaseConfig);
 
 const db = firebase.database();
 document.addEventListener("DOMContentLoaded", () => {
+    loadPositions();
 let isCaptain =
         localStorage.getItem("captainMode") === "true";
 
@@ -126,56 +127,38 @@ updateCaptainUI();
 
     const initialPositions = new Map();
 function savePositions() {
-
     const positions = {};
 
     players.forEach(player => {
-
-        const playerId =
+        const id =
             player.dataset.id ||
             player.classList[1];
 
-        positions[playerId] = {
-
+        positions[id] = {
             left: player.style.left,
             top: player.style.top
-
         };
-
     });
 
-    localStorage.setItem(
-        "tacticsPositions",
-        JSON.stringify(positions)
-    );
-}
-function loadPositions() {
+    db.ref("boardPositions").set(positions);
+                }
+    function loadPositions() {
+    db.ref("boardPositions").on("value", (snapshot) => {
+        const positions = snapshot.val();
+        if (!positions) return;
 
-    const saved =
-        localStorage.getItem("tacticsPositions");
+        players.forEach(player => {
+            const id =
+                player.dataset.id ||
+                player.classList[1];
 
-    if (!saved) return;
-
-    const positions = JSON.parse(saved);
-
-    players.forEach(player => {
-
-        const playerId =
-            player.dataset.id ||
-            player.classList[1];
-
-        if (positions[playerId]) {
-
-            player.style.left =
-                positions[playerId].left;
-
-            player.style.top =
-                positions[playerId].top;
-        }
-
+            if (positions[id]) {
+                player.style.left = positions[id].left;
+                player.style.top = positions[id].top;
+            }
+        });
     });
-}
-
+    }
     // SAVE ORIGINAL POSITIONS
     players.forEach(player => {
         initialPositions.set(player, {
@@ -183,8 +166,7 @@ function loadPositions() {
             top: player.offsetTop
         });
     });
-loadPositions();
-
+    
     // EDIT BUTTON
     editBtn.addEventListener("click", () => {
        
