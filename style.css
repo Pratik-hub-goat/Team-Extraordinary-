@@ -1,0 +1,643 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #0f172a;
+    color:white;
+}
+
+  header {
+    background-color: #0891b2;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+   nav {
+
+    display:flex;
+    gap:15px;
+
+    background:#334155;
+
+    padding:10px;
+
+    overflow-x:auto;
+
+    white-space:nowrap;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+}
+
+nav a {
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    flex-shrink:0;
+}
+    
+   display:flex;
+    gap: 15px;
+    background: #334155;
+    padding: 10px;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+section {
+    margin: 15px;
+    padding: 15px;
+  background:#1a1a1a;
+    border-radius: 22px;
+border:1px solid #aa0000;
+}
+
+
+.board{
+    position:relative;
+
+    height:400px;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    background:
+    repeating-linear-gradient(
+    90deg,
+    #2e8b57,
+    #2e8b57 40px,
+    #2a7d50 40px,
+    #2a7d50 80px
+    );
+}
+
+.chat-box {
+    background-color: #0f172a;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 70%;
+    padding: 10px;
+}
+
+button {
+
+    padding:10px;
+    margin-left:5px;
+
+    background-color:#22c55e;
+
+    border:none;
+    border-radius:5px;
+
+    color:white;
+}
+
+button:hover {
+
+    opacity:0.9;
+}
+
+.player-card {
+    background: #334155;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#profile {
+    margin-top: 15px;
+    background: #0f172a;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+}
+details{
+    margin-top:10px;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:bold;
+    color:#2ecc71;
+}
+.match-card{
+    background:#34445d;
+    padding:15px;
+    margin:15px 0;
+    border-radius:12px;
+}
+
+.match-card h3{
+    margin-bottom:10px;
+}
+html{
+    scroll-behavior:smooth;
+}
+.stat-card{
+    background:#34445d;
+    padding:15px;
+    margin:15px 0;
+    border-radius:12px;
+}
+
+.stat-card h3{
+    margin-bottom:10px;
+}
+.practice-card{
+    background:#34445d;
+    padding:15px;
+    margin:15px 0;
+    border-radius:12px;
+}
+
+.practice-card h3{
+    margin-bottom:10px;
+}
+
+nav a{
+    flex-shrink: 0;
+}
+.board{
+    position:relative;
+    height:400px;
+    background:green;
+    border-radius:15px;
+    overflow:hidden;
+}
+.player{
+
+    position:absolute;
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:black;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    font-size:9px;
+
+    font-weight:bold;
+
+    padding:3px;
+}
+
+.gk{
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.lb{
+    bottom:90px;
+    left:4%;
+}
+
+.cb1{
+    bottom:90px;
+    left:62%;
+}
+
+.cb2{
+    bottom:90px;
+    left:25%;
+}
+
+.rb{
+    bottom:90px;
+    left:85%;
+}
+.cm1{
+    bottom:180px;
+    left:70%;
+}
+
+.cam{
+    bottom:230px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.cm2{
+    bottom:180px;
+    right:70%;
+}
+
+.lw{
+    top:40px;
+    left:10%;
+}
+
+.st{
+    top:25px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.rw{
+    top:40px;
+    left:78%;
+}
+.center-line{
+    position:absolute;
+    left:50%;
+    top:0;
+    width:3px;
+    height:100%;
+    background:white;
+}
+
+.center-circle{
+    position:absolute;
+    width:90px;
+    height:90px;
+
+    border:3px solid white;
+    border-radius:50%;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+}
+.left-box{
+    position:absolute;
+
+    width:80px;
+    height:180px;
+
+    border:3px solid white;
+
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.right-box{
+    position:absolute;
+
+    width:80px;
+    height:180px;
+
+    border:3px solid white;
+
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+}
+.left-goal{
+    position:absolute;
+
+    width:50px;
+    height:12px;
+
+    background:white;
+
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.right-goal{
+    position:absolute;
+
+    width:50px;
+    height:12px;
+
+    background:white;
+
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+}
+.player{
+    text-decoration:none;
+}
+.player:visited{
+    color:black;
+}
+.player-photo{
+
+    width:100%;
+    height:100%;
+
+    border-radius:50%;
+
+    object-fit:cover;
+}
+.jersey{
+
+    position:absolute;
+
+    bottom:-12px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:black;
+
+    color:white;
+
+    font-size:10px;
+
+    padding:2px 6px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+}
+#editBtn{
+
+    padding:10px;
+
+    margin-bottom:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-weight:bold;
+}
+/* Styling changes when Drag Mode is turned on */
+#editBtn.edit-mode-on {
+    background-color: #ef4444; /* Turns red when active */
+    color: white;
+}
+
+/* While dragging is enabled, change cursor and disable links */
+.board.dragging-enabled .player {
+    cursor: move;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none; /* Crucial for mobile! Prevents scrolling page while moving a player */
+}
+
+/* Prevents clicking profile links accidentally while moving pieces */
+.board.dragging-enabled .player.is-moving {
+    z-index: 1000;
+    opacity: 0.8;
+}
+.player {
+    touch-action: none;
+}
+.chat-box {
+    height: 200px;
+    overflow-y: auto;
+    background: #0f172a;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.chat-message {
+    padding: 6px 10px;
+    margin: 5px 0;
+    background: #334155;
+    border-radius: 8px;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+.chat-input-area {
+    display: flex;
+    gap: 5px;
+}
+
+#chatInput {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+.delete-btn {
+    float: right;
+    background: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 14px;
+}
+.emoji-bar{
+
+    margin:10px 0;
+
+    display:flex;
+
+    gap:6px;
+
+    flex-wrap:wrap;
+}
+
+.emoji-bar button{
+
+    padding:8px;
+
+    font-size:18px;
+}
+#teamStatus{
+
+    margin-top:10px;
+
+    padding:10px;
+
+    background:#22c55e;
+
+    color:white;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    display:inline-block;
+}
+#teamBanner{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+.team-overview{
+
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+
+    padding:15px;
+}
+
+.info-card{
+
+    min-width:120px;
+
+    background:#1d2d50;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    text-align:center;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.info-card h3{
+
+    margin-bottom:8px;
+    font-size:15px;
+}
+
+.info-card p{
+
+    font-size:24px;
+    font-weight:bold;
+}
+#announcementInput{
+
+    width:100%;
+    height:80px;
+
+    padding:10px;
+
+    border-radius:10px;
+
+    border:none;
+
+    margin-bottom:10px;
+
+    box-sizing:border-box;
+}
+
+#announcementBox{
+
+    margin-top:15px;
+}
+
+.announcement{
+
+    background:#1d2d50;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    margin-bottom:10px;
+
+    border-left:4px solid gold;
+}
+.delete-announcement{
+
+    float:right;
+
+    background:transparent;
+
+    border:none;
+
+    color:red;
+
+    cursor:pointer;
+}
+.rateBtn{
+
+    background:#28a745;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-top:8px;
+
+}
+
+.rateBtn:hover{
+
+    transform:scale(1.05);
+
+}
+
+.ratingDisplay{
+
+    font-weight:bold;
+    margin-top:8px;
+
+}
+body.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+body.dark-mode section{
+    background:#1e1e1e;
+    color:white;
+}
+
+body.dark-mode nav{
+    background:#222;
+}
+
+body.dark-mode nav a{
+    color:white;
+}
+
+body.dark-mode .player-card,
+body.dark-mode .match-card,
+body.dark-mode .practice-card,
+body.dark-mode .info-card,
+body.dark-mode .stat-card{
+    background:#2a2a2a;
+    color:white;
+    border:1px solid #444;
+}
+
+body.dark-mode textarea,
+body.dark-mode input,
+body.dark-mode select{
+    background:#333;
+    color:white;
+    border:1px solid #555;
+}
+
+body.dark-mode button{
+    background:#444;
+    color:white;
+}
+<link rel="stylesheet" href="album.css">

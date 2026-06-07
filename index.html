@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team Extraordinary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<img id="teamBanner" src="images/banner.jpg">
+    <h1> 🌹 Team Extraordinary</h1>
+    <p>Welcome to the official team hub</p>
+
+    <div id="teamStatus">
+        🟢 Team Status: Active
+    </div>
+
+    <button id="changeBannerBtn">
+        Change Banner
+    </button>
+
+    <button id="resetBannerBtn">
+        Reset Banner
+    </button>
+<button id="themeBtn">
+🌙 Dark Mode
+</button>
+<button id="captainLoginBtn">
+🔒 Captain Login
+</button>
+
+<div id="captainStatus">
+❌ Guest Mode
+</div>
+</header>
+<section class="team-overview">
+
+    <div class="info-card">
+        <h3> 🏆 Official Matches</h3>
+        <p>4</p>
+    </div>
+
+    <div class="info-card">
+        <h3>⚽ Goals</h3>
+        <p>1</p>
+    </div>
+
+    <div class="info-card">
+        <h3>🛡 Clean Sheets</h3>
+        <p>21</p>
+    </div>
+
+    <div class="info-card">
+        <h3>👥 Members</h3>
+        <p>33</p>
+    </div>
+
+</section>
+<nav>
+    <a href="#team">Players</a>
+    <a href="#matches">Match History</a>
+    <a href="#stats">Statistics</a>
+    <a href="#tactics">Tactics</a>
+    <a href="#chat">Chat</a>
+    <a href="#practice">Practice Records</a>
+    <a href="#poll">Polls</a>
+    <a href="#scorers">Top Scorers</a>
+    <a href="#assists">Assists</a>
+    <a href="#seasonRanking">
+Player Of Season
+</a>
+<a href="#attendance">Attendance</a>
+<a href="#schedule">Schedule</a>
+<a href="#availability">
+Availability
+</a>
+<a href="#fixtures">Fixtures</a>
+<a href="#diary">Diary</a>
+<a href="#squadSelection">Squad</a>
+<a href="#timeline">Timeline</a>
+</nav>
+
+<section id="team">
+    <h2>Team Members</h2>
+    <ul>
+        <li>Captain</li>
+        <li>Striker</li>
+        <li>Midfielder</li>
+        <li>Defender</li>
+        <li>Goalkeeper</li>
+    </ul>
+</section>
+
+<section id="tactics">
+<div class="formation-controls">
+
+    <button onclick="setFormation('433')">4-3-3</button>
+    <button onclick="setFormation('5221')">5-2-2-1</button>
+    <button onclick="setFormation('4222')">4-2-2-2</button>
+    <button onclick="setFormation('3331')">3-3-3-1</button>
+
+</div>
+
+ <h2>Tactics Board</h2>
+   <button id="editBtn">
+Edit Tactics
+</button>
+<button id="resetBtn">Reset Positions</button>
+
+    <div class="board">
+
+    <div class="center-line"></div>
+   <div class="center-circle"></div>
+
+<div class="left-box"></div>
+<div class="right-box"></div>
+
+<div class="left-goal"></div>
+<div class="right-goal"></div>
+<a href="#swarup" class="player gk">
+    Swarup
+    <span class="jersey">1</span>
+</a>
+
+<a href="#rono" class="player lb">Rono
+<span class="jersey">2</span>
+
+</a>
+
+<a href="#ayush" class="player cb1">Ayush
+<span class="jersey">5</span>
+
+</a>
+
+<a href="#deep" class="player cb2">Deep
+<span class="jersey">4</span>
+
+</a>
+
+<a href="#sujit" class="player rb">Sujit
+<span class="jersey">8</span>
+
+</a>
+
+<a href="#debamalya" class="player cm1">Debamalya
+<span class="jersey">11</span>
+
+</a>
+
+<a href="#pratik" class="player cam">
+
+<img src="images/pratik.jpg" class="player-photo">
+<span class="jersey">10</span>
+
+</a>
+
+<a href="#debapriya" class="player cm2">Debapriya
+<span class="jersey">17</span>
+
+</a>
+
+<a href="#rajdeep" class="player lw">Rajdeep
+<span class="jersey">12</span>
+
+</a>
+
+<a href="#joseph" class="player st">Joseph
+<span class="jersey">9</span>
+
+</a>
+
+<a href="#simon" class="player rw">Simon
+<span class="jersey">7</span>
+
+</a>
+</section>
+<section id="album">
+    <h2>📸 Team Album</h2>
+
+    <form id="albumForm">
+        <input type="text" id="albumTitle" placeholder="Album title (e.g. Match Day)" />
+        <button type="submit">Create Album</button>
+    </form>
+
+    <div id="albumContainer"></div>
+</section>
+<section id="announcements">
+
+    <h2>📢 Announcements</h2>
+
+    <textarea
+        id="announcementInput"
+        placeholder="Write announcement..."
+    ></textarea>
+
+    <button id="postAnnouncementBtn">
+        Post Announcement
+    </button>
+
+    <div id="announcementBox"></div>
+
+</section>
+
+<section id="chat">
+    <h2>Team Chat</h2>
+<button id="changeNameBtn">
+Change Name
+</button>
+    <div id="chatBox" class="chat-box"></div>
+<div class="emoji-bar">
+
+    <button onclick="addEmoji('⚽')"> 🌹</button>
+    <button onclick="addEmoji('🔥')">🔥</button>
+    <button onclick="addEmoji('💪')">💪</button>
+    <button onclick="addEmoji('👏')">👏</button>
+    <button onclick="addEmoji('👍')">👍</button>
+    <button onclick="addEmoji('😂')">😂</button>
+
+</div>
+    <div class="chat-input-area">
+
+        <input type="text" id="chatInput" placeholder="Type message... 🙂" />
+
+        <button id="sendBtn">Send</button>
+
+    </div>
+
+</section>
+
+<section id="team"></section>
+
+    <h2>Team Members</h2>
+
+<div class="player-card" id="debapriya">
+
+<h3>Debapriya Dey</h3>
+
+<p>Position: Midfield</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+</p>
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 91</p>
+<p>Shooting: 90</p>
+<p>Passing: 88</p>
+<p>Vision: 89</p>
+<p>Strength: 90</p>
+<p>Stamina: 92</p>
+<p>Technique: 89</p>
+
+</details>
+
+</div>
+<div class="player-card" id="swarup">
+
+<h3>Swarup Biswas</h3>
+
+<p>Position: Goalkeeper</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+</p>
+<details>
+
+<summary>View Profile</summary>
+
+<p>Reflexes: 91</p>
+<p>Handling: 89</p>
+<p>Positioning: 91</p>
+<p>Strength: 90</p>
+<p>Throwing: 88</p>
+<p>Diving: 86</p>
+<p>communication: 93</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="debamalya">
+
+<h3>Debamalya Dey</h3>
+
+<p>Position: Midfield</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+</p>
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 92</p>
+<p>Passing: 82</p>
+<p>Vision: 81</p>
+<p>Strength: 88</p>
+<p>Shooting: 89</p>
+<p>Stamina: 91</p>
+<p>Technique: 82</p>
+
+</details>
+
+</div>
+    
+ <div class="player-card" id="deep">
+
+<h3>Deepbarman</h3>
+
+<p>Position: Centre Back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+</p>
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 89</p>
+<p>Passing: 89</p>
+<p>Vision: 83</p>
+<p>Strength: 84</p>
+<p>shooting: 93</p>
+<p>stamina: 88</p>
+<p>Technique: 91</p>
+
+</details>
+
+</div>
+
+ <div class="player-card" id="sujit">
+
+<h3>Sujit Paul</h3>
+
+<p>Position: Left Back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+</p>
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 80</p>
+<p>Passing: 82</p>
+<p>Vision: 82</p>
+<p>Strength: 76</p>
+<p>shooting: 82</p>
+<p>stamina: 82</p>
+<p>Technique: 84</p>
+
+</details>
+
+</div>
+
+ <div class="player-card" id="sornabo">
+
+<h3>Sornabo Saha</h3>
+
+<p>Position: Centre Back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+</p>
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 82</p>
+<p>Passing: 84</p>
+<p>Vision: 84</p>
+<p>Strength: 82</p>
+<p>shooting: 89</p>
+<p>stamina: 83</p>
+<p>Technique: 90</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="rajdeep">
+
+<h3>Rajdeep</h3>
+
+<p>Position: Right back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 82</p>
+<p>Passing: 89</p>
+<p>Vision: 86</p>
+<p>Strength: 80</p>
+<p>shooting: 89</p>
+<p>stamina: 79</p>
+<p>Technique: 86</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="ayush_1">
+
+<h3>Ayush Majumdar</h3>
+
+<p>Position: Centre Back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 80</p>
+<p>Passing: 86</p>
+<p>Vision: 87</p>
+<p>Strength: 83</p>
+<p>shooting: 84</p>
+<p>stamina: 80</p>
+<p>Technique: 87</p>
+
+</details>
+
+</div>
+
+ <div class="player-card" id="joseph">
+    
+<h3>JOSEPH</h3>
+
+<p>Position: STRIKER</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 96</p>
+<p>Passing: 89</p>
+<p>Vision: 87</p>
+<p>Strength: 89</p>
+<p>shooting: 94</p>
+<p>stamina: 91</p>
+<p>Technique: 88</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="arindam">
+
+<h3>Arindam Acharjee</h3>
+
+<p>Position: Left Back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 81</p>
+<p>Passing: 79</p>
+<p>Vision: 84</p>
+<p>Strength: 79</p>
+<p>shooting: 80</p>
+<p>stamina: 82</p>
+<p>Technique: 85</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="arnab">
+
+<h3>Arnab</h3>
+
+<p>Position: Right Back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 76</p>
+<p>Passing: 78</p>
+<p>Vision: 78</p>
+<p>Strength: 75</p>
+<p>shooting: 70</p>
+<p>stamina: 75</p>
+<p>Technique: 68</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="soumyajit">
+
+<h3>Soumyajit Das</h3>
+
+<p>Position: Centre Back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 80</p>
+<p>Passing: 79</p>
+<p>Vision: 74</p>
+<p>Strength: 81</p>
+<p>shooting: 85</p>
+<p>stamina: 78</p>
+<p>Technique: 78</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="rono">
+
+<h3>Rono</h3>
+
+<p>Position: CDM</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 84</p>
+<p>Passing: 86</p>
+<p>Vision: 86</p>
+<p>Strength: 80</p>
+<p>shooting: 86</p>
+<p>stamina: 81</p>
+<p>Technique: 87</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="aniruddha">
+
+<h3>Aniruddha</h3>
+
+<p>Position: Centre Back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 75</p>
+<p>Passing: 72</p>
+<p>Vision: 70</p>
+<p>Strength: 85</p>
+<p>shooting: 78</p>
+<p>stamina: 64</p>
+<p>Technique: 72</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="aman">
+
+<h3>Aman Majumdar</h3>
+
+<p>Position: Right Back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 82</p>
+<p>Passing: 78</p>
+<p>Vision: 77</p>
+<p>Strength: 79</p>
+<p>shooting: 79</p>
+<p>stamina: 81</p>
+<p>Technique: 75</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="yusuf">
+
+<h3>Yusuf</h3>
+
+<p>Position: Midfield</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 88</p>
+<p>Passing: 84</p>
+<p>Vision: 80</p>
+<p>Strength: 88</p>
+<p>shooting: 86</p>
+<p>stamina: 87</p>
+<p>Technique: 85</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="subir">
+
+<h3>Subir</h3>
+
+<p>Position: Centre back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 82</p>
+<p>Passing: 85</p>
+<p>Vision: 84</p>
+<p>Strength: 78</p>
+<p>shooting: 79</p>
+<p>stamina: 90</p>
+<p>Technique: 75</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="ayush_2">
+
+<h3>Ayush Das</h3>
+
+<p>Position: Centre back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 80</p>
+<p>Passing: 80</p>
+<p>Vision: 82</p>
+<p>Strength: 87</p>
+<p>shooting: 82</p>
+<p>stamina: 83</p>
+<p>Technique: 77</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="Sayan">
+
+<h3>Sayan</h3>
+
+<p>Position: Right Back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 78</p>
+<p>Passing: 79</p>
+<p>Vision: 72</p>
+<p>Strength: 78</p>
+<p>shooting: 76</p>
+<p>stamina: 71</p>
+<p>Technique: 79</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="sayan">
+
+<h3>Sayan Das(10)</h3>
+
+<p>Position: Right Wing</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 91</p>
+<p>Passing: 94</p>
+<p>Vision: 95</p>
+<p>Strength: 85</p>
+<p>shooting: 94</p>
+<p>stamina: 91</p>
+<p>Technique: 97</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="ayush_sarkar">
+
+<h3>Ayush Sarkar</h3>
+
+<p>Position: Centre Back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 89</p>
+<p>Passing: 86</p>
+<p>Vision: 84</p>
+<p>Strength: 84</p>
+<p>shooting: 82</p>
+<p>stamina: 89</p>
+<p>Technique: 81</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="Ajay Debnath">
+
+<h3>Ajay Debnath</h3>
+
+<p>Position: Midfield</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 78</p>
+<p>Passing: 80</p>
+<p>Vision: 72</p>
+<p>Strength: 74</p>
+<p>shooting: 78</p>
+<p>stamina: 70</p>
+<p>Technique: 68</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="Saham">
+
+<h3>Saham</h3>
+
+<p>Position: Centre Back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 90</p>
+<p>Passing: 90</p>
+<p>Vision: 86</p>
+<p>Strength: 91</p>
+<p>shooting: 90</p>
+<p>stamina: 87</p>
+<p>Technique: 90</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="deepjoy">
+
+<h3>Deepjoy</h3>
+
+<p>Position: Centre Back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 85</p>
+<p>Passing: 76</p>
+<p>Vision: 71</p>
+<p>Strength: 87</p>
+<p>shooting: 60</p>
+<p>stamina: 66</p>
+<p>Technique: 55</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="sainit">
+
+<h3>Sainit</h3>
+
+<p>Position: Striker</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 96</p>
+<p>Passing: 90</p>
+<p>Vision: 89</p>
+<p>Strength: 88</p>
+<p>shooting: 93</p>
+<p>stamina: 94</p>
+<p>Technique: 88</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="prabanta">
+
+<h3>Prabanta</h3>
+
+<p>Position: Cente Back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 89</p>
+<p>Passing: 88</p>
+<p>Vision: 87</p>
+<p>Strength: 92</p>
+<p>shooting: 90</p>
+<p>stamina: 88</p>
+<p>Technique: 89</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="joydeb">
+
+<h3>Joydeb Shil</h3>
+
+<p>Position: Left Back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 81</p>
+<p>Passing: 84</p>
+<p>Vision: 86</p>
+<p>Strength: 79</p>
+<p>shooting: 88</p>
+<p>stamina: 82</p>
+<p>Technique: 80</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="nayan">
+
+<h3>Nayan</h3>
+
+<p>Position: Right Back</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 84</p>
+<p>Passing: 85</p>
+<p>Vision: 84</p>
+<p>Strength: 89</p>
+<p>shooting: 90</p>
+<p>stamina: 86</p>
+<p>Technique: 82</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="simon">
+
+<h3>Simon Miah Chowdhury</h3>
+
+<p>Position: Left Wing</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 88</p>
+<p>Passing: 82</p>
+<p>Vision: 85</p>
+<p>Strength: 82</p>
+<p>shooting: 89</p>
+<p>stamina: 85</p>
+<p>Technique: 86</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="pritam">
+
+<h3>Pritam</h3>
+
+<p>Position: Midfield</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 89</p>
+<p>Passing: 92</p>
+<p>Vision: 89</p>
+<p>Strength: 90</p>
+<p>shooting: 94</p>
+<p>stamina: 86</p>
+<p>Technique: 91</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="arghadip">
+
+<h3>Arghadip</h3>
+
+<p>Position: Midfield</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 83</p>
+<p>Passing: 84</p>
+<p>Vision: 80</p>
+<p>Strength: 86</p>
+<p>shooting: 88</p>
+<p>stamina: 87</p>
+<p>Technique: 85</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="deepak">
+
+<h3>Deepak</h3>
+
+<p>Position: Left Wing</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 91</p>
+<p>Passing: 90</p>
+<p>Vision: 90</p>
+<p>Strength: 88</p>
+<p>shooting: 93</p>
+<p>stamina: 92</p>
+<p>Technique: 92</p>
+
+</details>
+
+</div>
+
+<div class="player-card" id="pratik">
+
+<h3>Pratik Roy</h3>
+
+<p>Position: CAM</p>
+<button class="rateBtn">⭐ Rate Player</button>
+
+<p class="ratingDisplay">
+Rating: Not Rated
+<details>
+
+<summary>View Profile</summary>
+
+<p>Pace: 93</p>
+<p>Passing: 93</p>
+<p>Vision: 94</p>
+<p>Strength: 86</p>
+<p>shooting: 91</p>
+<p>stamina: 98</p>
+<p>Technique: 92</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section id="matches">
+
+    <h2>Match History</h2>
+<h3>➕ Add Match</h3>
+
+<input
+type="text"
+id="opponentInput"
+placeholder="Opponent Name">
+
+<input
+type="text"
+id="scoreInput"
+placeholder="Score (e.g. 2-1)">
+
+<input
+type="text"
+id="winnerInput"
+placeholder="Winner">
+
+<button id="addMatchBtn">
+Add Match
+</button>
+
+<div id="savedMatches"></div>
+    <div class="match-card">
+        <h3>ADMS vs Dubli Sports Team</h3>
+        <p>Score: 0 - 4</p>
+        <p>Winner: Dubli Sports Team</p>
+    </div>
+
+    <div class="match-card">
+        <h3>ADMS vs Tripura Sports School</h3>
+        <p>Score: 0 - 11</p>
+        <p>Winner: Tripura Sports School</p>
+    </div>
+
+    <div class="match-card">
+        <h3>2025–2026 Achievement In kajal Smriti</h3>
+        <p>Reached Group Stage Match 4</p>
+    </div>
+
+</section>
+
+<section id="stats">
+
+    <h2>Team Statistics</h2>
+
+    <div class="stat-card">
+        <h3>Total Players</h3>
+        <p>33</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Official Matches Played</h3>
+        <p>2</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Wins</h3>
+        <p>0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Losses</h3>
+        <p>2</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Best Achievement</h3>
+        <p>Reached Kajal Smriti Eliminations once</p>
+    </div>
+
+</section>
+
+<section id="practice">
+
+    <h2>Practice Records</h2>
+
+    <div class="practice-card">
+
+        <h3>09/06/2026</h3>
+
+        <p><b>Attendance:</b> 20 players</p>
+
+        <p><b>Practice Type:</b> Team Training</p>
+
+        <p><b>Practice Match Winner:</b> Team Red</p>
+
+        <p><b>Dribbling:</b> Not Recorded Yet</p>
+
+        <p><b>Passing:</b> Not Recorded Yet</p>
+
+        <p><b>Behaviour:</b> Not Recorded Yet</p>
+
+        <p><b>Progress:</b> Not Recorded Yet</p>
+
+        <p><b>Captain Notes:</b> First official record entry.</p>
+
+    </div>
+
+</section>
+<section id="poll">
+
+<h2>🗳 Team Poll</h2>
+
+<p>Who was Man of the Match?</p>
+
+<button class="voteBtn" data-player="Pratik">
+Pratik
+</button>
+
+<button class="voteBtn" data-player="Joseph">
+Joseph
+</button>
+
+<button class="voteBtn" data-player="Simon">
+Simon
+</button>
+
+<button class="voteBtn" data-player="Debamalya">
+Debamalya
+</button>
+
+<button class="voteBtn" data-player="Debapriya">
+Debapriya
+</button>
+
+<button class="voteBtn" data-player="Swarup">
+Swarup
+</button>
+
+<button class="voteBtn" data-player="Deepbarman">
+Deepbarman
+</button>
+
+<button class="voteBtn" data-player="Ayushman">
+Ayushman
+</button>
+
+<button class="voteBtn" data-player="Sujit">
+Sujit
+</button>
+
+<button class="voteBtn" data-player="Rono">
+Rono
+</button>
+
+<button class="voteBtn" data-player="Sayan Das">
+Sayan Das
+</button>
+<button id="resetPollBtn">
+🗑 Reset Poll
+</button>
+<div id="pollResults"></div>
+
+</section>
+
+<section id="scorers">
+
+<h2>⚽ Top Scorers</h2>
+
+<div id="scorerControls">
+
+<button class="goalBtn" data-player="Joseph">
++ Goal Joseph
+</button>
+
+<button class="goalBtn" data-player="Simon">
++ Goal Simon
+</button>
+
+<button class="goalBtn" data-player="Pratik">
++ Goal Pratik
+</button>
+
+<button class="goalBtn" data-player="Debamalya">
++ Goal Debamalya
+</button>
+
+<button class="goalBtn" data-player="Debapriya">
++ Goal Debapriya 
+</button>
+
+<button class="goalBtn" data-player="Deepbarman">
++ Goal Deepbarman
+</button>
+<button class="goalBtn" data-player="Sornabo">
++ Goal Sornabo
+</button>
+<button class="goalBtn" data-player="Rono">
++ Goal Rono
+</button>
+<button class="goalBtn" data-player="Sujit">
++ Goal sujit
+</button>
+<button class="goalBtn" data-player="Deepak">
++ Goal Deepak
+</button>
+<button class="goalBtn" data-player="Sayan">
++ Goal Sayan
+</button>
+<button class="goalBtn" data-player="Ayushman">
++ Goal Ayushman 
+</button>
+</div>
+
+<div id="topScorers"></div>
+
+<button id="resetGoalsBtn">
+🗑 Reset Goals
+</button>
+
+</section>
+<section id="assists">
+
+<h2>🎯 Top Assists</h2>
+
+<div id="assistControls">
+
+<button class="assistBtn" data-player="Joseph">+ Assist Joseph</button>
+
+<button class="assistBtn" data-player="Pratik">+ Assist Pratik</button>
+
+<button class="assistBtn" data-player="Sornabo">+ Assist Sornabo</button>
+
+<button class="assistBtn" data-player="Deepbarman">+ Assist Deepbarman</button>
+
+<button class="assistBtn" data-player="Sujit">+ Assist Sujit</button>
+
+<button class="assistBtn" data-player="Debapriya">+ Assist Debapriya</button>
+
+<button class="assistBtn" data-player="Rono">+ Assist Rono</button>
+
+<button class="assistBtn" data-player="Debamalya">+ Assist Debamalya</button>
+
+<button class="assistBtn" data-player="Sayan">+ Assist Sayan</button>
+
+<button class="assistBtn" data-player="Deepak">+ Assist Deepak</button>
+
+<button class="assistBtn" data-player="Yusuf">+ Assist Yusuf</button>
+
+<button class="assistBtn" data-player="Arnab">+ Assist Arnab</button>
+
+<button class="assistBtn" data-player="Deepjoy">+ Assist Deepjoy</button>
+
+</div>
+
+<div id="topAssists"></div>
+
+<button id="resetAssistsBtn">
+🗑 Reset Assists
+</button>
+
+</section>
+<section id="seasonRanking">
+
+<h2>🏆 Player Of The Season</h2>
+
+<div id="seasonLeaderboard"></div>
+
+</section>
+<section id="attendance">
+
+<h2>📋 Attendance Tracker</h2>
+
+<div id="attendanceButtons">
+
+<button class="attendanceBtn" data-player="Swarup Biswas">Swarup Biswas</button>
+
+<button class="attendanceBtn" data-player="Debapriya Dey">Debapriya Dey</button>
+
+<button class="attendanceBtn" data-player="Debamalya Dey">Debamalya Dey</button>
+
+<button class="attendanceBtn" data-player="Deepbarman">Deepbarman</button>
+
+<button class="attendanceBtn" data-player="Sujit Paul">Sujit Paul</button>
+
+<button class="attendanceBtn" data-player="Sornabo Saha">Sornabo Saha</button>
+
+<button class="attendanceBtn" data-player="Rajdeep">Rajdeep</button>
+
+<button class="attendanceBtn" data-player="Ayush Majumdar">Ayush Majumdar</button>
+
+<button class="attendanceBtn" data-player="Joseph">Joseph</button>
+
+<button class="attendanceBtn" data-player="Arindam Acharjee">Arindam Acharjee</button>
+
+<button class="attendanceBtn" data-player="Arnab">Arnab</button>
+
+<button class="attendanceBtn" data-player="Soumyajit Das">Soumyajit Das</button>
+
+<button class="attendanceBtn" data-player="Rono">Rono</button>
+
+<button class="attendanceBtn" data-player="Aniruddha">Aniruddha</button>
+
+<button class="attendanceBtn" data-player="Aman Majumdar">Aman Majumdar</button>
+
+<button class="attendanceBtn" data-player="Yusuf">Yusuf</button>
+
+<button class="attendanceBtn" data-player="Subir">Subir</button>
+
+<button class="attendanceBtn" data-player="Ayush Das">Ayush Das</button>
+
+<button class="attendanceBtn" data-player="Sayan">Sayan</button>
+
+<button class="attendanceBtn" data-player="Sayan Das (10)">Sayan Das (10)</button>
+
+<button class="attendanceBtn" data-player="Ayush Sarkar">Ayush Sarkar</button>
+
+<button class="attendanceBtn" data-player="Ajay Debnath">Ajay Debnath</button>
+
+<button class="attendanceBtn" data-player="Saham">Saham</button>
+
+<button class="attendanceBtn" data-player="Deepjoy">Deepjoy</button>
+
+<button class="attendanceBtn" data-player="Sainit">Sainit</button>
+
+<button class="attendanceBtn" data-player="Prabanta">Prabanta</button>
+
+<button class="attendanceBtn" data-player="Joydeb Shil">Joydeb Shil</button>
+
+<button class="attendanceBtn" data-player="Nayan">Nayan</button>
+
+<button class="attendanceBtn" data-player="Simon Miah Chowdhury">Simon Miah Chowdhury</button>
+
+<button class="attendanceBtn" data-player="Pritam">Pritam</button>
+
+<button class="attendanceBtn" data-player="Arghadip">Arghadip</button>
+
+<button class="attendanceBtn" data-player="Deepak">Deepak</button>
+
+<button class="attendanceBtn" data-player="Pratik Roy">Pratik Roy</button>
+
+</div>
+
+<h3>🏆 Attendance Leaderboard</h3>
+
+<div id="attendanceLeaderboard"></div>
+
+<button id="resetAttendanceBtn">
+🗑 Reset Attendance
+</button>
+
+</section>
+<section id="schedule">
+
+<h2>📅 Training Schedule</h2>
+
+<input
+type="date"
+id="scheduleDate">
+
+<input
+type="text"
+id="scheduleTime"
+placeholder="Time">
+
+<input
+type="text"
+id="scheduleLocation"
+placeholder="Location">
+
+<button id="addScheduleBtn">
+Add Training
+</button>
+
+<div id="scheduleBoard"></div>
+
+<button id="resetScheduleBtn">
+🗑 Clear Schedule
+</button>
+
+</section>
+<section id="availability">
+
+<h2>✅ Player Availability</h2>
+
+<select id="availabilityPlayer">
+
+<option>Joseph</option>
+<option>Pratik Roy</option>
+<option>Deepak</option>
+<option>Debamalya Dey</option>
+<option>Debapriya Dey</option>
+<option>Sornabo Saha</option>
+<option>Deepbarman</option>
+<option>Sujit Paul</option>
+<option>Rono</option>
+<option>Yusuf</option>
+<option>Arnab</option>
+<option>Deepjoy</option>
+<option>Swarup Biswas</option>
+<option>Rajdeep</option>
+<option>Ayush Majumdar</option>
+<option>Arindam Acharjee</option>
+<option>Soumyajit Das</option>
+<option>Aniruddha</option>
+<option>Aman Majumdar</option>
+<option>Subir</option>
+<option>Ayush Das</option>
+<option>Sayan</option>
+<option>Sayan Das (10)</option>
+<option>Ayush Sarkar</option>
+<option>Ajay Debnath</option>
+<option>Saham</option>
+<option>Sainit</option>
+<option>Prabanta</option>
+<option>Joydeb Shil</option>
+<option>Nayan</option>
+<option>Simon Miah Chowdhury</option>
+<option>Pritam</option>
+<option>Arghadip</option>
+
+</select>
+
+<select id="availabilityStatus">
+
+<option>✅ Available</option>
+<option>🤕 Injured</option>
+<option>📚 Busy</option>
+<option>❌ Absent</option>
+
+</select>
+
+<button id="setAvailabilityBtn">
+Update Status
+</button>
+
+<div id="availabilityBoard"></div>
+
+<button id="resetAvailabilityBtn">
+🗑 Reset Statuses
+</button>
+
+</section>
+<section id="fixtures">
+
+<h2>📅 Match Fixtures</h2>
+
+<input
+type="date"
+id="fixtureDate">
+
+<input
+type="text"
+id="fixtureOpponent"
+placeholder="Opponent">
+
+<input
+type="text"
+id="fixtureVenue"
+placeholder="Venue">
+
+<button id="addFixtureBtn">
+Add Fixture
+</button>
+
+<div id="fixturesBoard"></div>
+
+<button id="resetFixturesBtn">
+🗑 Clear Fixtures
+</button>
+
+</section>
+<section id="diary">
+
+<h2>📖 Team Diary</h2>
+
+<input
+type="date"
+id="diaryDate">
+
+<textarea
+id="diaryEntry"
+placeholder="Write today's notes..."
+></textarea>
+
+<button id="saveDiaryBtn">
+Save Entry
+</button>
+
+<div id="diaryBoard"></div>
+
+<button id="resetDiaryBtn">
+🗑 Clear Diary
+</button>
+
+</section>
+<section id="squadSelection">
+
+<h2>📝 Matchday Squad</h2>
+
+<select id="playerSelect">
+
+<option>Joseph</option>
+<option>Pratik Roy</option>
+<option>Deepak</option>
+<option>Debamalya Dey</option>
+<option>Debapriya Dey</option>
+<option>Sornabo Saha</option>
+<option>Deepbarman</option>
+<option>Sujit Paul</option>
+<option>Rono</option>
+<option>Yusuf</option>
+<option>Arnab</option>
+<option>Deepjoy</option>
+<option>Swarup Biswas</option>
+<option>Rajdeep</option>
+<option>Ayush Majumdar</option>
+<option>Arindam Acharjee</option>
+<option>Soumyajit Das</option>
+<option>Aniruddha</option>
+<option>Aman Majumdar</option>
+<option>Subir</option>
+<option>Ayush Das</option>
+<option>Sayan</option>
+<option>Sayan Das (10)</option>
+<option>Ayush Sarkar</option>
+<option>Ajay Debnath</option>
+<option>Saham</option>
+<option>Sainit</option>
+<option>Prabanta</option>
+<option>Joydeb Shil</option>
+<option>Nayan</option>
+<option>Simon Miah Chowdhury</option>
+<option>Pritam</option>
+<option>Arghadip</option>
+
+</select>
+
+<button id="addToSquadBtn">
+Add To Squad
+</button>
+
+<h3>Starting XI / Squad</h3>
+
+<div id="squadBoard"></div>
+
+<button id="clearSquadBtn">
+🗑 Clear Squad
+</button>
+
+</section>
+<section id="timeline">
+
+<h2>🏛 Team History Timeline</h2>
+
+<input
+type="date"
+id="timelineDate">
+
+<input
+type="text"
+id="timelineText"
+placeholder="Achievement or milestone">
+
+<button id="addTimelineBtn">
+Add Milestone
+</button>
+
+<div id="timelineBoard"></div>
+
+<button id="resetTimelineBtn">
+🗑 Clear Timeline
+</button>
+
+</section>
+<footer>
+    <p>Team Extraordinary © 2026</p>
+</footer>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-database-compat.js"></script>
+<script src="script.js"></script>
+<script src="js/album.store.js"></script>
+<script src="js/album.service.js"></script>
+<script src="js/album.js"></script>
+</body>
+</html>
